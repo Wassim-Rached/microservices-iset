@@ -1,0 +1,30 @@
+version: "3"
+services:
+  postgres:
+    container_name: main-postgres
+    image: postgres:16.1-alpine3.19
+    restart: always
+    #command: -c ssl=on -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "172.17.0.1:5432:5432"
+
+  pgadmin4:
+    container_name: main-pgadmin4
+    image: elestio/pgadmin:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_USERNAME: wassim
+      PGADMIN_DEFAULT_EMAIL: wassimrached@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_LISTEN_PORT: 7777
+    ports:
+      - "172.17.0.1:7777:7777"
+    volumes:
+      - ./servers.json:/pgadmin4/servers.json

@@ -1,0 +1,23 @@
+server:
+  port: 0
+spring:
+  application:
+    name: RestaurantService
+  datasource:
+    url: jdbc:postgresql://172.17.0.1:5432/dbrestaurant
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1999/eureka}
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
