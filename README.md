@@ -8,9 +8,9 @@
    ```
 
 - to close them run :
-```bash
-   docker-compose down
-```
+    ```bash
+    docker-compose down
+    ```
    
    
 
