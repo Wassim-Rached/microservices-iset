@@ -1,17 +1,31 @@
 # About Docker compose
 
-1. PostgreSQL Database
+1. Running Docker Compose
+   
+- to start the containers run :
+   ```bash
+   docker-compose up
+   ```
+
+- to close them run :
+```bash
+   docker-compose down
+```
+   
+   
+
+2. PostgreSQL Database
 
 - Database Name: postgres
 - Username: postgres
 - Password: password
 
-2. PgAdmin
+3. PgAdmin
 
 - Username: wassim
 - Password: password
 - PgAdmin URL: http://172.17.0.1:7777
 
-3. Connecting to the Database
+4. Connecting to the Database
 
    172.17.0.1:5432
