@@ -9,4 +9,7 @@ public class LineItems {
     @Id
     @GeneratedValue
     private Integer id;
+    private Integer quantite;
+    private Integer idMenu;
+    private Integer idTicket;
 }

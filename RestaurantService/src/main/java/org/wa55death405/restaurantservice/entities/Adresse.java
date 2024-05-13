@@ -1,16 +1,17 @@
-package org.wa55death405.courtierservice.entities;
+package org.wa55death405.restaurantservice.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Courier {
+public class Adresse {
     @Id
     @GeneratedValue
     private Integer id;
-    private String Cin;
+    private String Numero;
     private String Nom;
-    private String Telephone;
-    private Boolean Disponible;
+    private String Rue;
+    private String Cite;
+    private String Ville;
 }
