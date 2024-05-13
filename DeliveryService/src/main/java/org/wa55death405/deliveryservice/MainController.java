@@ -9,4 +9,6 @@ public class MainController {
     public String home() {
         return "Welcome to the Delivery Service!";
     }
+
+    // nothing to be implemented here :|
 }
