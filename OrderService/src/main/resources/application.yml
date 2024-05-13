@@ -2,7 +2,7 @@ server:
   port: 0
 spring:
   application:
-    name: OrderService
+    name: order-service
   datasource:
     url: jdbc:postgresql://172.17.0.1:5432/dborder
     username: postgres

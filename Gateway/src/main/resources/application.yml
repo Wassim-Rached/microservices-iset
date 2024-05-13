@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Gateway
+#  cloud:
+#    gateway:
+#      routes:
+#          - id: order-service
+#            uri: lb://order-service
+#            predicates:
+#              - Path=/order/**
+
+server:
+  port: 2999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1999/eureka}

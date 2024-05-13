@@ -6,12 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="KitchenService" />
-        <module name="ServiceRegistry" />
-        <module name="RestaurantService" />
-        <module name="OrderService" />
-        <module name="CourtierService" />
-        <module name="DeliveryService" />
+        <module name="Gateway" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +14,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CourtierService" options="-parameters" />
       <module name="DeliveryService" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
       <module name="KitchenService" options="-parameters" />
       <module name="OrderService" options="-parameters" />
       <module name="RestaurantService" options="-parameters" />
