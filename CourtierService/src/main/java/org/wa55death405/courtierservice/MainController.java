@@ -1,5 +1,6 @@
 package org.wa55death405.courtierservice;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,9 @@ public class MainController {
 
     @PostMapping("{id}/location")
     public ResponseEntity<?> updateLocation(@RequestBody UpdateLocationRequest request,@PathVariable Integer id) {
-        var location = locationRepository.findById(id).orElseThrow();
+        var location = locationRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException("Location with id " + id + " not found")
+        );
         location.setLatitude(request.Latitude);
         location.setLongitude(request.Longitude);
         locationRepository.save(location);

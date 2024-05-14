@@ -1,13 +1,6 @@
 spring:
   application:
     name: Gateway
-#  cloud:
-#    gateway:
-#      routes:
-#          - id: order-service
-#            uri: lb://order-service
-#            predicates:
-#              - Path=/order/**
 
 server:
   port: 2999

@@ -7,9 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableDiscoveryClient
 public class CourtierServiceApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(CourtierServiceApplication.class, args);
 	}
-
 }

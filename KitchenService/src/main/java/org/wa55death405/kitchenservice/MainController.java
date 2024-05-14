@@ -1,6 +1,7 @@
 package org.wa55death405.kitchenservice;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +15,14 @@ import java.sql.Timestamp;
 public class MainController {
 
     private final TicketRepository ticketRepository;
+    private final Environment environment;
 
     @GetMapping
     public String healthCheck() {
-        return "Kitchen Service is up and running!";
+        return "Port: " + environment.getProperty("local.server.port");
     }
 
-    @PostMapping
+    @PostMapping("createTicket")
     public ResponseEntity<?> createTicket(@RequestBody CreateTicketRequest request) {
         Ticket ticket = new Ticket();
         ticket.setState(request.state());
