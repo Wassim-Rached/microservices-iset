@@ -9,4 +9,8 @@ public class Courier {
     @Id
     @GeneratedValue
     private Integer id;
+    private String Cin;
+    private String Nom;
+    private String Telephone;
+    private Boolean Disponible;
 }

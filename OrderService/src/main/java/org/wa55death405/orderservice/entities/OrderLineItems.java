@@ -9,4 +9,8 @@ public class OrderLineItems {
     @Id
     @GeneratedValue
     private Integer id;
+
+    private Integer quantite;
+    private Integer idMenu;
+    private Integer idOrder;
 }

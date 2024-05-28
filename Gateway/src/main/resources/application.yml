@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Gateway
+
+server:
+  port: 2999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1999/eureka}
